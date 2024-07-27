@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayidbek's Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark-theme {
+            background-color: #2e2e2e;
+            color: #e0e0e0;
+        }
+        .light-theme {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .navbar {
+            margin-bottom: 2rem;
+        }
+        .theme-switch {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background-color: #333;
+            color: #f2f2f2;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+        .theme-switch:hover {
+            background-color: #555;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body class="light-theme">
+
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Sayidbek</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Theme Switch Button -->
+    <button class="theme-switch btn btn-dark" onclick="toggleTheme()">Switch to Dark Theme</button>
+
+    <div id="home" class="container text-center" style="margin-top: 80px;">
+        <h1>Hey, I am Sayidbek</h1>
+    </div>
+
+    <div id="about" class="container text-center section">
+        <h2>About Me</h2>
+        <p>I'm a senior student currently pursuing a B.Sc in IT at Amity University Tashkent. I have a keen interest in machine learning and Python programming. I also completed a 2-month internship at Linkdata.uz where I gained valuable experience.</p>
+    </div>
+
+    <div id="education" class="container text-center section">
+        <h2>Education</h2>
+        <ul class="list-unstyled">
+            <li>2021-2022: Foundation Program, Amity University Tashkent</li>
+            <li>2022-2025: B.Sc (IT), Amity University Tashkent</li>
+        </ul>
+    </div>
+
+    <div id="skills" class="container text-center section">
+        <h2>Skills</h2>
+        <ul class="list-unstyled">
+            <li>Python</li>
+            <li>Git</li>
+            <li>MySQL</li>
+            <li>Microsoft Tools</li>
+        </ul>
+        <p>Currently working on a machine learning project.</p>
+    </div>
+
+    <div id="contact" class="container text-center section">
+        <h2>Contact</h2>
+        <p>You can reach me at <a href="mailto:sayidbek@example.com">sayidbek@example.com</a>.</p>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const button = document.querySelector('.theme-switch');
+            if (body.classList.contains('light-theme')) {
+                body.classList.replace('light-theme', 'dark-theme');
+                button.textContent = 'Switch to Light Theme';
+            } else {
+                body.classList.replace('dark-theme', 'light-theme');
+                button.textContent = 'Switch to Dark Theme';
+            }
+        }
+    </script>
+</body>
+</html>
